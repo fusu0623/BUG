@@ -6,24 +6,21 @@ package com.qinli.puzzle1;
  * @creat 2021/2/3 23:29
  */
 public class Main {
-    static Student[] students = new Student[3];
+    static Student[] students = new Student[4];
 
     public static void main(String[] args) {
 
-        students[1].name = "法外狂徒张三";
-        students[1].age = 20;
-        students[2].name = "李四";
-        students[2].age = 21;
-        students[3].name = "王五";
-        students[3].age = 19;
+        students[1] = new Student("法外狂徒张三",20);
+        students[2] = new Student("李四",21);
+        students[3] = new Student("王五",19);
 
-        return;
+        printStu();
     }
 
     static void printStu(){
-        for (Student student : students) {
-            System.out.println("姓名：" + student.name);
-            System.out.println("年龄：" + student.age);
+        for (int i=1;i<=3;i++) {
+            System.out.println("姓名：" + students[i].name);
+            System.out.println("年龄：" + students[i].age);
         }
     }
 }
